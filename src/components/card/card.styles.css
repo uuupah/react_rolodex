@@ -12,9 +12,16 @@
   transition: transform 0.25s ease-out;
 }
 
+/* not entirely sure of the use of backface vis, transform and transition in this use case */
+
 .card-container img {
   width: 180px;
   margin: 0 auto;
+  border-radius: 50%;
+  background-color: floralwhite;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
 
 .card-container:hover {
