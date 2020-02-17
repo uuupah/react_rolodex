@@ -13,7 +13,7 @@ import "./card.styles.css";
 export const Card = props => (
   <div className="card-container">
     <img
-      alt="monster"
+      alt="staff member"
       src={`https://faces.design/faces/${getGender(props.monster.id)}${
         props.monster.id
       }.png`}

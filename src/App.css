@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: floralwhite;
 }
 
 .App-logo {
@@ -36,4 +35,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  font-family: "Catamaran", sans-serif;
+  font-size: 72px;
+  color: #2c3e50;
 }
