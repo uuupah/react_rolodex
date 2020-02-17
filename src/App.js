@@ -10,7 +10,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      monsters: [],
+      staff: [],
       searchField: ""
     };
   }
@@ -18,7 +18,7 @@ class App extends React.Component {
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
-      .then(users => this.setState({ monsters: users }));
+      .then(users => this.setState({ staff: users }));
   }
 
   // arrow function binds the context, allowing you to set "this" when the function is defined
@@ -32,9 +32,9 @@ class App extends React.Component {
   };
 
   render() {
-    const { monsters, searchField } = this.state;
-    const filteredMonsters = monsters.filter(monster =>
-      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    const { staff, searchField } = this.state;
+    const filteredStaff = staff.filter(staffMem =>
+      staffMem.name.toLowerCase().includes(searchField.toLowerCase())
     );
     return (
       <div className="App">
@@ -43,7 +43,7 @@ class App extends React.Component {
           placeholder="search staff"
           handleChange={this.handleChange}
         />
-        <CardList monsters={filteredMonsters} />
+        <CardList staff={filteredStaff} />
       </div>
     );
   }
@@ -51,9 +51,9 @@ class App extends React.Component {
 
 export default App;
 
-// const {monsters, searchField} = this.state;
+// const {staff, searchField} = this.state;
 // is shorthand for
-// const monsters = this.state.monsters;
+// const staff = this.state.monsters;
 // const searchField = this.state.searchField;
 
 // a note on binding
