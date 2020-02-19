@@ -4,6 +4,7 @@ import { CardList } from "./components/card-list/card-list.component";
 import { SearchBox } from "./components/search-box/search-box.component";
 
 import "./App.css";
+import userJson from "./users.json";
 
 class App extends React.Component {
   constructor() {
@@ -16,9 +17,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(users => this.setState({ staff: users }));
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    //   .then(response => response.json())
+    //   .then(users => this.setState({ staff: users }));
+
+    // the placeholder json hosting broke midway through dev which is honestly such a cool and cash money thing to happen
+
+    this.setState({ staff: userJson });
   }
 
   // arrow function binds the context, allowing you to set "this" when the function is defined
