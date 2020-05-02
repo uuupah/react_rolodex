@@ -14,9 +14,7 @@ export const Card = props => (
   <div className="card-container">
     <img
       alt="staff member"
-      src={`https://faces.design/faces/${getGender(props.staffMem.id)}${
-        props.staffMem.id
-      }.png`}
+      src={`https://robohash.org/${props.monster.id}?set=set5`}
     />
     <h2>{props.staffMem.name}</h2>
     <p>{props.staffMem.email}</p>
@@ -31,3 +29,6 @@ function getGender(n) {
 }
 
 //src={`https://robohash.org/${props.monster.id}?set=set5`}
+
+
+//src={`https://faces.design/faces/${getGender(props.staffMem.id)}${props.staffMem.id}.png`}
